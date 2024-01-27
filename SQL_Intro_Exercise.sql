@@ -11,7 +11,7 @@ WHERE p.Price = 11.99 OR p.Price = 13.99;
 
 -- find all products that do NOT cost 11.99 - using NOT
 SELECT * FROM bestbuy.products
-WHERE NOT p.Price = 11.99;
+WHERE NOT products.Price = 11.99;
 
 -- find all products and sort them by price from greatest to least
 SELECT * FROM bestbuy.products as p
@@ -44,6 +44,6 @@ SELECT * FROM bestbuy.employees as e
 WHERE e.MiddleInitial IS NULL AND e.Title = 'Geek Squad';
 
 -- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
-SELECT * FROM besbuy.products
-WHERE StockLevel BETWEEN 500 AND 1200
+SELECT * FROM bestbuy.products
+WHERE products.StockLevel BETWEEN 500 AND 1200
 ORDER BY Price;
